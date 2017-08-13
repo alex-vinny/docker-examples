@@ -1,0 +1,13 @@
+FROM            alpine
+MAINTAINER      alexzamboli <alex.zamboli@gmail.com>
+
+# install all dependencies
+RUN             apk add --update \
+                python \
+                python-dev \
+                py-pip
+RUN             pip install flask
+
+COPY            hello.py /
+EXPOSE          5000
+ENTRYPOINT      ["python", "hello.py"]

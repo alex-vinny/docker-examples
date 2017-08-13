@@ -1,0 +1,6 @@
+version: "3"
+services:
+  redis-store1:
+    image: redis
+  redis-store2:
+    image: redis
